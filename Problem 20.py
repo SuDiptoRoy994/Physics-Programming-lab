@@ -1,0 +1,25 @@
+import numpy as np
+import matplotlib.pyplot as plt
+#Data
+x1 = np.arange(-2,2,400)
+x2 = np.arange(0.001,2,400)
+#create 2x2 layout
+fig,axs=plt.subplots(2,2,figsize=(8,6))
+#Plot 1:y=np.exp(x)
+axs[0,0].plot(x1,np.exp(x1),color='blue')
+axs[0,0].set_title('y=np.exp(x)')
+axs[0,0].grid(True)
+#Plot 2:y=np.exp(-x)
+axs[0,1].plot(x1,np.exp(-x1),color='red')
+axs[0,1].set_title('y=np.exp(-x)')
+axs[0,1].grid(True)
+#Plot 3:y=ln(x)
+axs[1,0].plot(x2,np.log(x2),color='green')
+axs[1,0].set_title('y=ln(x)')
+axs[1,0].grid(True)
+#Plot 3:y=np.tanh(x)
+axs[1,1].plot(x1,np.tanh(x1),color='pink')
+axs[1,1].set_title('y=np.tanh(x)')
+axs[1,1].grid(True)
+fig.tight_layout()
+plt.show()
